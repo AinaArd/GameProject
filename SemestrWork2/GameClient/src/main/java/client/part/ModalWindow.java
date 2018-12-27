@@ -7,8 +7,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
-class ModalWindow {
-    static void winWindow(String winner) {
+public class ModalWindow {
+    public static void winWindow(String winner) {
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
 

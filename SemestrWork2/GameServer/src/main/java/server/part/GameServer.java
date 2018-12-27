@@ -43,7 +43,7 @@ public class GameServer {
         }
     }
 
-    public class ClientHandler extends Thread {
+    private class ClientHandler extends Thread {
 
         private Socket clientSocket;
         private BufferedReader bufferedReader;
