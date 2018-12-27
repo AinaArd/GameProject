@@ -1,10 +1,11 @@
 package client.part;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 
 class ModalWindow {
     static void winWindow(String winner) {
@@ -12,7 +13,7 @@ class ModalWindow {
         stage.initModality(Modality.APPLICATION_MODAL);
 
         Pane pane = new Pane();
-        Text text = new Text(winner);
+        Label text = new Label(winner);
         pane.getChildren().add(text);
 
         Scene scene = new Scene(pane, 100, 100);

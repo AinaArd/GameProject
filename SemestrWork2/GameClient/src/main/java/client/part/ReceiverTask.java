@@ -38,14 +38,14 @@ public class ReceiverTask extends Task<Void> {
                                     if (checkWinner('x')) {
                                         System.out.println("X won");
                                         ModalWindow.winWindow("X won");
-                                        restart();
+//                                        restart();
                                     }
                                 } else {
                                     controller.getButtons()[buttonRow][buttonColumn].setText(String.valueOf('o'));
                                     if (checkWinner('o')) {
                                         System.out.println("O won");
                                         ModalWindow.winWindow("O won");
-                                        restart();
+//                                        restart();
                                     }
                                 }
                             });
