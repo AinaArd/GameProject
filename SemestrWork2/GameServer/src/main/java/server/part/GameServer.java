@@ -9,12 +9,20 @@ import java.net.Socket;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-class GameServer {
+public class GameServer {
     private List<ClientHandler> players;
+
+    public List<ClientHandler> getPlayers() {
+        return players;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
 
     private String userId = "1";
 
-    GameServer() {
+    public GameServer() {
         players = new CopyOnWriteArrayList<>();
     }
 
@@ -35,12 +43,12 @@ class GameServer {
         }
     }
 
-    private class ClientHandler extends Thread {
+    public class ClientHandler extends Thread {
 
         private Socket clientSocket;
         private BufferedReader bufferedReader;
 
-        ClientHandler(Socket socket) {
+        public ClientHandler(Socket socket) {
             this.clientSocket = socket;
             players.add(this);
             System.out.println("Player added from port " + socket.getPort());
